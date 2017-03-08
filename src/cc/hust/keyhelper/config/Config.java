@@ -49,7 +49,6 @@ public class Config {
 			lastLocationX = Integer.valueOf(xmlRoot.elementText("lastLocationX"));
 			lastLocationY = Integer.valueOf(xmlRoot.elementText("lastLocationY"));
 		} catch (Exception e) {
-			e.printStackTrace();
 			lastKeySet = "";//上次选择的改键方案
 			lastLocationX = 500;//上次窗口位置
 			lastLocationY = 100;//上次窗口位置

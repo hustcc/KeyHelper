@@ -56,10 +56,8 @@ public class JIntellitypeHelper implements HotkeyListener, IntellitypeListener {
 			//注册监听切换按钮Alt + Z
 			JIntellitype.getInstance().registerHotKey(HOT_KEY_START, JIntellitype.MOD_ALT, 'Z');
 		} catch (RuntimeException e) {
-			e.printStackTrace();
 			System.out.println("initial JIntellitype ERROR.");
 		} catch (AWTException e) {
-			e.printStackTrace();
 			System.out.println("initial JIntellitype ERROR.");
 		}
 	}

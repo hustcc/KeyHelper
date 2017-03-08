@@ -3,6 +3,7 @@ package cc.hust.keyhelper.config;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -102,8 +103,11 @@ public class KeySetConfig {
 				map.put(keys.get(i).attributeValue("name"), keyMap);
 			}
 			return map;
+		} catch(FileNotFoundException e) {
+			// 找不到文件，第一次启动
+			this.saveToXml();
+			return new HashMap<String, Map<String, String>>();
 		} catch (Exception e) {
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "key-config.xml配置文件解析错误",
 					"配置错误", JOptionPane.ERROR_MESSAGE);
 			System.exit(0);

@@ -9,9 +9,15 @@
 
 ## 运行 & 开发
 
-将项目 clone 下来，然后将 dom4j 加入到 classpath，不知道是用新版本的 dom4j 会不会有问题（或者 dom4j 几年都没有更新了，好久不写 Java 了，当年毕业的时候想着一定要找一个写 Java 的公司工作）。
+1. Runnable jar
 
-然后运行 cc.hust.keyhelper.frame 包下的 MainFrame.java 文件即可启动。
+	直接下载 **KeyHelper.jar** 文件，然后双击运行即可，前提是电脑上有 jre 环境，兼容行不知道，建议 1.6 及以上。
+
+2. clone 项目运行
+
+	将项目 clone 下来，然后将 dom4j 加入到 classpath，不知道是用新版本的 dom4j 会不会有问题（或者 dom4j 几年都没有更新了，好久不写 Java 了，当年毕业的时候想着一定要找一个写 Java 的公司工作）。
+
+	然后运行 cc.hust.keyhelper.frame 包下的 **MainFrame.java 文件**即可启动。
 
 
 ## 截图示例

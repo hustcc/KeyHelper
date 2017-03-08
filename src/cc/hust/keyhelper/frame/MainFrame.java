@@ -23,6 +23,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 import cc.hust.keyhelper.config.Config;
@@ -63,6 +64,10 @@ public class MainFrame extends JFrame implements ActionListener {
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
 		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			//UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		} catch(Exception e) {}
+		try {
 			if (JIntellitype.checkInstanceAlreadyRunning("JIntellitype Test Application")) {
 				System.exit(1);
 			}
@@ -77,7 +82,6 @@ public class MainFrame extends JFrame implements ActionListener {
 				}
 			});
 		} catch (Exception e) {
-			e.printStackTrace();
 			e.printStackTrace(new PrintWriter(new File("error.log")));
 			System.exit(1);
 		}
